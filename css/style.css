@@ -734,18 +734,34 @@ body {
   height: 100vh;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .gpm_landing {
+    display: block;
+    height: auto;
+    padding: 24px;
+  }
+}
 
 .gpm_landing__branding {
   max-height: 100px;
   margin-bottom: 32px;
-  -webkit-animation: fadeIn;
-  animation: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+}
+@media (max-width: 768px) {
+  .gpm_landing__branding {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .gpm_landing__branding {
+    -webkit-animation: fadeIn;
+    animation: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
 }
 .gpm_landing__branding img {
   max-height: 100px;
@@ -758,19 +774,44 @@ body {
   padding: 0;
   align-items: flex-start;
 }
+@media (max-width: 768px) {
+  .landing__projects_list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .projects_list__item {
+  width: 100%;
+  margin: 10px;
+}
+.projects_list__item .projects_list__item__content {
   min-width: 148px;
   max-width: 200px;
-  margin: 10px;
-  -webkit-animation: bounceInUp;
-  animation: bounceInUp;
-  -webkit-animation-duration: .6s;
-  animation-duration: .6s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+}
+@media (max-width: 768px) {
+  .projects_list__item {
+    padding: 24px 10px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .projects_list__item:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+@media (min-width: 768px) {
+  .projects_list__item {
+    -webkit-animation: bounceInUp;
+    animation: bounceInUp;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
 }
 .projects_list__item:nth-child(1) {
   transition-delay: 0.0s;
