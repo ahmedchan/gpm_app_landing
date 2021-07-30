@@ -785,6 +785,14 @@ body {
 .projects_list__item {
   width: 100%;
   margin: 10px;
+  -webkit-animation: bounceInUp;
+  animation: bounceInUp;
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 .projects_list__item .projects_list__item__content {
   min-width: 148px;
@@ -799,18 +807,6 @@ body {
   }
   .projects_list__item:nth-child(even) {
     background-color: #f2f2f2;
-  }
-}
-@media (min-width: 768px) {
-  .projects_list__item {
-    -webkit-animation: bounceInUp;
-    animation: bounceInUp;
-    -webkit-animation-duration: .6s;
-    animation-duration: .6s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
   }
 }
 .projects_list__item:nth-child(1) {
